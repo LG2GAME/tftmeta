@@ -1,0 +1,33 @@
+@import "@styles/colors.scss";
+@import "@styles/mixins.scss";
+
+.card {
+  @include setDisplay(flex, center, start, column);
+  @include setTransition();
+  backdrop-filter: blur(7.5px);
+  background-color: $cl-b-blue-50 !important;
+  border-radius: 25px;
+  border: 2px solid $cl-gold;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
+  gap: 15px;
+  padding: 60px 30px;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+
+  .header {
+    font-size: 24px;
+  }
+  .sidetext {
+    font-size: 16px;
+  }
+
+  img {
+    width: 90px;
+    height: 90px;
+  }
+
+  &:hover {
+    @include setScale();
+  }
+}

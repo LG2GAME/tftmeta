@@ -1,0 +1,79 @@
+@import "@styles/colors.scss";
+@import "@styles/mixins.scss";
+
+.navbar {
+  @include setDisplay(flex, center, center, row);
+  height: 13.75vh;
+
+  .nav {
+    &-link {
+      text-align: center;
+      color: $cl-white;
+      font-size: 16px !important;
+      text-transform: capitalize;
+      height: fit-content;
+
+      &--btn {
+        @include setDisplay();
+        @include setTransition();
+        border-radius: 99px;
+        border: 2px solid $cl-white;
+        padding: 0px 15px !important;
+        text-decoration: none;
+      }
+    }
+
+    &-account {
+      font-size: 26px;
+    }
+  }
+
+  .dropdown-menu {
+    background-color: $cl-b-blue;
+    border: 2px solid $cl-white;
+    border-color: $cl-white-25;
+    padding: 8px 15px !important;
+    left: unset !important;
+    right: 0 !important;
+    width: max-content;
+    margin-top: 10px !important;
+
+    .nav-link {
+      text-align: left;
+    }
+  }
+
+  &__sidebar-body {
+    @include setDisplay(flex, center, end, row);
+    color: $cl-white !important;
+    text-align: start;
+    text-transform: capitalize;
+  }
+}
+
+@media (width < 992px) {
+  .navbar__sidebar {
+    background-color: rgb(27, 27, 62);
+    background: linear-gradient(180deg, rgb(27, 37, 62) 0%, rgb(0, 0, 0) 100%);
+
+    &-body {
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+  .dropdown-menu {
+    background-color: transparent !important;
+    border-color: $cl-white-25;
+    color: $cl-white !important;
+    padding: 8px 15px !important;
+
+    .nav-link {
+      text-align: center;
+    }
+  }
+
+  .nav-account {
+    font-size: 32px;
+  }
+}

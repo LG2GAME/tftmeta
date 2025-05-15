@@ -1,0 +1,38 @@
+@import "@styles/colors.scss";
+
+.accordion {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+
+  &-item {
+    background-color: transparent !important;
+    border-color: $cl-white-25 !important;
+    border-width: 2px !important;
+  }
+
+  &-button {
+    color: $cl-gray !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+    filter: brightness(0) invert(1) !important;
+
+    &:not(.collapsed) {
+      color: $cl-white !important;
+      border-bottom: 2px solid $cl-white-25 !important;
+    }
+
+    &::after {
+      border-color: $cl-white !important;
+    }
+
+    &:focus {
+      filter: brightness(0) invert(1) !important;
+    }
+  }
+
+  &-body {
+    color: $cl-gray !important;
+    background-color: transparent !important;
+  }
+}

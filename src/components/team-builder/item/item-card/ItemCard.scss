@@ -1,0 +1,51 @@
+@import "@styles/mixins.scss";
+
+.item-card {
+  &__onboard-icon {
+    width: 33%;
+    height: auto;
+  }
+
+  &__items {
+    &-half-item {
+      width: max-content;
+      cursor: pointer;
+
+      &-icon {
+        max-width: 30px;
+        width: 30px;
+      }
+    }
+
+    &-full-item {
+      text-align: center;
+      width: max-content;
+      cursor: pointer;
+      position: relative;
+
+      &-icon {
+        max-width: 45px;
+        width: 45px;
+      }
+    }
+  }
+}
+
+.item-preview {
+  @include setDisplay();
+  position: relative;
+  width: max-content;
+
+  &__icon {
+    width: 30px;
+  }
+
+  &__count {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: min-content;
+    text-shadow: -1px -1px 2px #151719, 1px -1px 2px #151719,
+      -1px 1px 2px #151719, 1px 1px 2px #151719;
+  }
+}

@@ -1,0 +1,65 @@
+@import "@styles/colors.scss";
+@import "@styles/mixins.scss";
+
+.comps {
+  @include setDisplay(flex, start, center, column);
+  width: 100%;
+  border: 2px solid $cl-gray;
+  font-weight: 600;
+  overflow-x: auto;
+
+  &-info {
+    flex: 1 1 80px;
+  }
+  &-body {
+    width: calc(100% - 375px);
+  }
+
+  &-name {
+    text-align: start;
+  }
+  &-place {
+    text-align: end;
+  }
+
+  &__header,
+  &__content {
+    @include setDisplay(flex, center, space-between, row);
+    padding: 15px 10px;
+    border-bottom: 2px solid $cl-gray;
+    gap: 30px;
+    min-width: 100%;
+
+    &:nth-last-child(1) {
+      border: 0;
+    }
+  }
+
+  &__header {
+    color: $cl-gray;
+  }
+
+  &__content {
+    color: $cl-gold;
+
+    &-build {
+      @include setDisplay(flex, center, start, row);
+      gap: 15px;
+      flex-wrap: nowrap;
+
+      &-unit {
+        position: relative;
+
+        &-items {
+          @include setDisplay(flex, center, center, row);
+          gap: 5px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          transform: translateY(50%);
+        }
+      }
+    }
+  }
+}

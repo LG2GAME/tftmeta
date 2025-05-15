@@ -1,0 +1,59 @@
+@import "@styles/colors";
+@import "@styles/mixins";
+
+.cookie-consent {
+  position: fixed;
+  right: 1.5vw;
+  bottom: 1.5vw;
+  max-width: 30%;
+  background-color: $cl-gray;
+  padding: 30px 60px;
+  border-radius: 25px;
+
+  h3 {
+    text-align: center;
+  }
+
+  &-more {
+    width: 100%;
+    @include setDisplay(flex, center, space-between, column);
+    gap: 15px;
+  }
+
+  &-button {
+    @include setDisplay();
+    @include setTransition();
+    background-color: transparent;
+    border-radius: 99px;
+    border: 2px solid $cl-white;
+    color: $cl-white;
+    padding: 0.75rem 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 100%;
+
+    &:hover {
+      @include setScale();
+    }
+  }
+}
+
+@media (width <= 1200px) {
+  .cookie-consent {
+    max-width: 50%;
+  }
+}
+
+@media (width <= 992px) {
+  .cookie-consent {
+    max-width: 75%;
+    padding: 15px 30px;
+  }
+}
+
+@media (width <= 575px) {
+  .cookie-consent {
+    max-width: 100%;
+    left: 1.5vw;
+  }
+}

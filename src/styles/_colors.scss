@@ -1,0 +1,49 @@
+// DEFAULT COLORS
+$cl-white: #fff;
+$cl-white-25: #ffffff40;
+$cl-black: #000;
+$cl-gray: #696984;
+$cl-dark-gray: #383d42;
+$cl-darker-gray: #24292e;
+$cl-gold: #e0a443;
+$cl-b-gold: #804f26;
+$cl-b-blue: #1b253e;
+$cl-b-blue-50: #1b253e80;
+$cl-blue-text: #0c090d;
+
+// GAME COLORS - TIER
+$cl-tier1: #6e7680;
+$cl-tier2: #156831;
+$cl-tier3: #1c4280;
+$cl-tier4: #893088;
+$cl-tier5: #c79e57;
+$cl-tier6: #73a3ff;
+
+// GAME COLORS - TRAIT
+$cl-trait-prism: #fff
+  conic-gradient(
+    #afb3ee,
+    #bae9bd,
+    #edfedf,
+    #d3fbee,
+    #c1f9f7,
+    #9cf1fe,
+    #f5dafd,
+    #f799f8,
+    #c0eee7,
+    #96c0ec,
+    #7f96f1,
+    #dca3fc,
+    #b7e7eb,
+    #b8daf2,
+    #e7efce,
+    #e6a380,
+    #bcecaa,
+    #b1d2d2,
+    #afaff2,
+    #afaef2
+  );
+$cl-trait-gold: #c79e57;
+$cl-trait-silver: #8e9ba6;
+$cl-trait-brown: #b56c49;
+$cl-trait-def: transparent;

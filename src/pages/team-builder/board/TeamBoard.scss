@@ -1,0 +1,72 @@
+@import "@styles/colors.scss";
+@import "@styles/mixins.scss";
+
+.team-board {
+  @include setDisplay(flex, center, center, column);
+  margin-bottom: 15px;
+  gap: 30px;
+  border: 2px solid $cl-white-25;
+  padding: 30px;
+
+  &__clear {
+    @include setDisplay(flex, start, start, row);
+    width: 100%;
+
+    button {
+      @include setDisplay();
+      background: transparent;
+      border-radius: 6px;
+      border: 2px solid $cl-white-25;
+      color: $cl-white;
+      padding: 10px;
+    }
+  }
+
+  &__traits {
+    width: 100%;
+
+    &-list {
+      @include setDisplay();
+      gap: 30px;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+  }
+
+  &__extra {
+    @include setDisplay(flex, start, space-between, row);
+    width: 100%;
+
+    &-name {
+      color: $cl-gray;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    &-augments,
+    &-items {
+      @include setDisplay(flex, center, center, column);
+      width: 50%;
+      height: auto;
+    }
+
+    &-items-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 5px;
+    }
+
+    &-augments-container {
+      @include setDisplay();
+      gap: 30px;
+    }
+  }
+}
+
+@media (width<= 575px) {
+  .team-board__extra {
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+  }
+}

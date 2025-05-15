@@ -1,0 +1,9 @@
+@import "@styles/colors.scss";
+@import "@styles/mixins.scss";
+
+.composition {
+  @include setDisplay(flex, center, center, column);
+  @include minHeight(86.25vh);
+  text-align: center;
+  padding: 30px 0;
+}

@@ -1,0 +1,16 @@
+@import "@styles/colors.scss";
+@import "@styles/mixins.scss";
+
+.info {
+  @include setDisplay(flex, start, center, column);
+  gap: 60px;
+
+  &__container {
+    @include setDisplay(flex, start, center, column);
+    gap: 30px;
+
+    a {
+      color: $cl-white;
+    }
+  }
+}

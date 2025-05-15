@@ -1,0 +1,61 @@
+@import "@styles/mixins.scss";
+@import "@styles/colors.scss";
+
+.article {
+  @include setDisplay();
+  width: 100%;
+  gap: 10px;
+
+  img {
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+  }
+
+  &__content {
+    width: 60%;
+
+    &-header {
+      font-size: 20px;
+    }
+
+    &-desc {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      color: $cl-gray;
+      margin-bottom: 15px !important;
+    }
+  }
+
+  &__more {
+    @include setDisplay(flex, center, space-between, row);
+    text-align: center;
+
+    a {
+      color: $cl-gray;
+    }
+  }
+}
+
+@media (width <= 768px) {
+  .article {
+    flex-direction: column;
+    height: 100%;
+    gap: 15px;
+
+    img,
+    &__content {
+      width: 100%;
+    }
+  }
+}
+
+@media (width <= 576px) {
+  .article__more {
+    flex-direction: column-reverse;
+    gap: 15px;
+  }
+}

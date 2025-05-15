@@ -1,0 +1,37 @@
+@import "@styles/mixins.scss";
+@import "@styles/colors.scss";
+
+.news {
+  @include setDisplay(flex, center, center, column);
+  gap: 30px;
+
+  .article {
+    border: 2px solid $cl-white-25;
+    border-radius: 25px;
+
+    &__content {
+      padding-right: 30px;
+
+      &-desc {
+        -webkit-line-clamp: 3;
+      }
+    }
+  }
+}
+
+@media (width <= 992px) {
+  .news .article {
+    flex-direction: column;
+    height: 100%;
+    gap: 15px;
+
+    img,
+    &__content {
+      width: 100%;
+    }
+
+    &__content {
+      padding: 15px;
+    }
+  }
+}

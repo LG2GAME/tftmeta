@@ -1,0 +1,32 @@
+@import "@styles/colors.scss";
+@import "@styles/mixins.scss";
+
+.leveling {
+  @include setDisplay(flex, start, center, column);
+
+  &-title {
+    @include minHeight(86.25vh);
+    @include setDisplay(flex, center, center, column);
+    text-align: center;
+
+    p {
+      width: 50%;
+    }
+  }
+
+  &__container {
+    width: 100%;
+  }
+}
+
+@media (width <= 992px) {
+  .leveling-title p {
+    width: 80%;
+  }
+}
+
+@media (width <= 575px) {
+  .leveling-title p {
+    width: 100%;
+  }
+}

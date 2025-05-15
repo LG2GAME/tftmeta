@@ -1,0 +1,28 @@
+@mixin setDisplay(
+  $display: flex,
+  $align: center,
+  $justify: center,
+  $flex: row
+) {
+  align-items: $align;
+  display: $display !important;
+  flex-direction: $flex;
+  justify-content: $justify;
+}
+
+@mixin setTransition($delay: 0.3s) {
+  transition: all $delay ease;
+}
+
+@mixin setScale($scale: 1.025) {
+  scale: $scale;
+}
+
+@mixin minHeight($vHeight: 100vh) {
+  min-height: $vHeight;
+  width: 100%;
+
+  @media (width <= 992px) {
+    height: 100% !important;
+  }
+}

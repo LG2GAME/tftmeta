@@ -1,0 +1,100 @@
+@import "@styles/colors.scss";
+@import "@styles/mixins.scss";
+
+.tooltip-info {
+  @include setDisplay(flex, center, center, column);
+  background-color: $cl-dark-gray;
+  padding: 15px;
+  margin: 0 15px;
+  width: max-content;
+  height: max-content;
+  pointer-events: none;
+  position: absolute;
+
+  &--left {
+    left: 100%;
+  }
+
+  &--right {
+    right: 100%;
+  }
+}
+
+.champ-info {
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 45px;
+
+  &__name {
+    @include setDisplay(flex, center, center, column);
+    gap: 15px;
+
+    &-icon {
+      width: 80px;
+    }
+
+    &-name {
+      width: auto !important;
+      font-weight: 600;
+    }
+  }
+
+  &__traits {
+    &-list {
+      @include setDisplay(flex, start, center, column);
+      gap: 15px;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+  }
+
+  &__cost {
+    @include setDisplay(flex, center, center, row);
+    gap: 5px;
+    color: $cl-gold;
+  }
+}
+
+.item-info {
+  @include setDisplay(flex, start, center, column);
+  gap: 15px;
+
+  &__name {
+    @include setDisplay();
+    gap: 15px;
+
+    &-icon {
+      width: 60px;
+    }
+
+    &-name {
+      font-weight: 600;
+    }
+  }
+
+  &__desc {
+    width: 300px;
+    text-align: left;
+    font-size: 12px;
+    color: $cl-gray;
+  }
+
+  &__recipe {
+    gap: 15px;
+    @include setDisplay();
+
+    &-name {
+      font-size: 12px;
+    }
+
+    &-half-item {
+      @include setDisplay(flex, center, center, row);
+      gap: 15px;
+
+      &-icon {
+        width: 30px;
+      }
+    }
+  }
+}

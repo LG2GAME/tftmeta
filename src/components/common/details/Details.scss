@@ -1,0 +1,12 @@
+@import "@styles/colors.scss";
+
+.einfo {
+  background-color: $cl-gold;
+  width: fit-content;
+  padding: 7.5px 30px;
+  border-radius: 99px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: $cl-blue-text;
+  border: 2px solid $cl-b-gold;
+}

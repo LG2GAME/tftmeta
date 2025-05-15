@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "@styles/colors.scss";
+
+body {
+  color: $cl-white;
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  background-color: $cl-b-blue;
+}
+
+.header {
+  color: $cl-white;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.sidetext {
+  color: $cl-gray;
+  font-weight: 500;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.tier {
+  &-1 {
+    border: 3px solid $cl-tier1;
+  }
+  &-2 {
+    border: 3px solid $cl-tier2;
+  }
+  &-3 {
+    border: 3px solid $cl-tier3;
+  }
+  &-4 {
+    border: 3px solid $cl-tier4;
+  }
+  &-5 {
+    border: 3px solid $cl-tier5;
+  }
+  &-6 {
+    border: 3px solid $cl-tier6;
+  }
+}
+
+.trait {
+  &-0 {
+    background-color: $cl-trait-def;
+  }
+  &-1 {
+    background-color: $cl-trait-brown;
+  }
+  &-3 {
+    background-color: $cl-trait-silver;
+  }
+  &-4,
+  &-5 {
+    background-color: $cl-trait-gold;
+  }
+  &-6 {
+    background: $cl-trait-prism;
+  }
+}
+
+@media (width <= 768px) {
+  .header {
+    font-size: 32px;
+  }
+
+  .sidetext {
+    font-size: 16px;
+  }
+}
+
+@media (width <= 375px) {
+  .header {
+    font-size: 24px;
+  }
+
+  .sidetext {
+    font-size: 14px;
+  }
+}
