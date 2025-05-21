@@ -1,20 +1,22 @@
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
-import { lazy, Suspense } from "react";
+import { Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 
-import BgImg from "@components/layout/background-image/BgImg";
+import { Backdrop } from "@components/layout";
 
-const Home = lazy(() => import("@pages/home/Home"));
-const News = lazy(() => import("@pages/news/News"));
-const Grounds = lazy(() => import("@pages/grounds/Grounds"));
-const Economy = lazy(() => import("@pages/grounds/economy/Economy"));
-const Leveling = lazy(() => import("@pages/grounds/leveling/Leveling"));
-const Composition = lazy(() => import("@pages/composition/Composition"));
-const TeamBuilder = lazy(() => import("@pages/team-builder/TeamBuilder"));
-const Privacy = lazy(() => import("@pages/info/Privacy"));
-const Statute = lazy(() => import("@pages/info/Statute"));
-const AboutUs = lazy(() => import("@pages/info/AboutUs"));
+import {
+  Home,
+  Patchnotes,
+  Grounds,
+  GroundsEconomy,
+  GroundsLeveling,
+  Compositions,
+  AboutUs,
+  Privacy,
+  Statute,
+  TeamBuilder,
+} from "@pages";
 
 const AppRoutes = () => {
   return (
@@ -23,49 +25,49 @@ const AppRoutes = () => {
         <Route
           path="/"
           element={
-            <PageWithBg>
+            <BackdropWrapper>
               <Home />
-            </PageWithBg>
+            </BackdropWrapper>
           }
         />
         <Route
-          path="/news"
+          path="/patchnotes"
           element={
             <PageWrapper>
-              <News />
+              <Patchnotes />
             </PageWrapper>
           }
         />
         <Route
           path="/grounds"
           element={
-            <PageWithBg>
+            <BackdropWrapper>
               <Grounds />
-            </PageWithBg>
+            </BackdropWrapper>
           }
         />
         <Route
           path="/grounds/economy"
           element={
-            <PageWithBg>
-              <Economy />
-            </PageWithBg>
+            <BackdropWrapper>
+              <GroundsEconomy />
+            </BackdropWrapper>
           }
         />
         <Route
           path="/grounds/leveling"
           element={
-            <PageWithBg>
-              <Leveling />
-            </PageWithBg>
+            <BackdropWrapper>
+              <GroundsLeveling />
+            </BackdropWrapper>
           }
         />
         <Route
           path="/comps"
           element={
-            <PageWithBg>
-              <Composition />
-            </PageWithBg>
+            <BackdropWrapper>
+              <Compositions />
+            </BackdropWrapper>
           }
         />
         <Route
@@ -79,7 +81,7 @@ const AppRoutes = () => {
           }
         />
         <Route
-          path="/p-privacy"
+          path="/privacy"
           element={
             <PageWrapper>
               <Privacy />
@@ -111,9 +113,9 @@ const PageWrapper = ({ children }) => (
   <div className="container">{children}</div>
 );
 
-const PageWithBg = ({ children }) => (
+const BackdropWrapper = ({ children }) => (
   <>
-    <BgImg />
+    <Backdrop />
     <PageWrapper>{children}</PageWrapper>
   </>
 );

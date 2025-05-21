@@ -1,12 +1,9 @@
 import { Accordion } from "react-bootstrap";
+import { AccordionCard } from "@components/features";
+import "./leveling.scss";
+import { groundsLevelingData } from "@assets/data";
 
-import AccordionCard from "@components/common/accordion-card/AccordionCard";
-
-import "./Leveling.scss";
-
-import levelingData from "@assets/data/levelingData.json";
-
-function Economy() {
+function GroundsLeveling() {
   return (
     <section className="leveling">
       <div className="leveling-title">
@@ -20,7 +17,7 @@ function Economy() {
       </div>
       <div className="leveling__container mt-5">
         <Accordion defaultActiveKey="0">
-          {levelingData.map((data, dataIndex) => (
+          {groundsLevelingData.map((data, dataIndex) => (
             <AccordionCard key={dataIndex} data={data} index={dataIndex} />
           ))}
         </Accordion>
@@ -29,4 +26,4 @@ function Economy() {
   );
 }
 
-export default Economy;
+export default GroundsLeveling;

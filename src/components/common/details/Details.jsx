@@ -1,5 +1,7 @@
-import "./Details.scss";
+import "./details.scss";
 
-export const Details = ({ EInfo }) => {
+const Details = ({ EInfo }) => {
   return <p className="m-0 einfo">{EInfo}</p>;
 };
+
+export default Details;

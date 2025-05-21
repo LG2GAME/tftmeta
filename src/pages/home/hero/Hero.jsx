@@ -1,10 +1,6 @@
-import { Cards as Card } from "@components/common/cards/Cards";
-
-import "./Hero.scss";
-
-// import coachingIMG from "@assets/images/coaching.svg";
-import compsIMG from "@assets/images/comps.svg";
-import firstStepsIMG from "@assets/images/first-steps.svg";
+import { Card } from "@components/common";
+import { heroListData } from "@assets/data";
+import "./hero.scss";
 
 function Hero() {
   return (
@@ -17,18 +13,15 @@ function Hero() {
         </p>
       </div>
       <div className="hero__list">
-        <Card
-          path="grounds"
-          imageSRC={firstStepsIMG}
-          title="Pierwsze kroki"
-          text="Dowiedz się, jak zacząć grę w TFT i poznaj podstawy mechaniki."
-        />
-        <Card
-          path="comps"
-          imageSRC={compsIMG}
-          title="Kompozycje"
-          text="Poznaj topowe strategie i kompozycje w TFT."
-        />
+        {heroListData.map(({ path, image, title, description }, index) => (
+          <Card
+            key={index}
+            path={path}
+            imageSRC={image}
+            title={title}
+            text={description}
+          />
+        ))}
       </div>
     </section>
   );

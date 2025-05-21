@@ -1,13 +1,13 @@
-import CompSection from "@pages/home/compSection/CompSection";
-import Hero from "@pages/home/hero/Hero";
-import LatestNews from "@pages/home/latestNews/LatestNews";
+import Compositions from "./compositions/Compositions";
+import Hero from "./hero/Hero";
+import News from "./news/News";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <LatestNews />
-      <CompSection />
+      <News />
+      <Compositions />
     </>
   );
 }

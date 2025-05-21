@@ -1,0 +1,14 @@
+@import "@styles/colors.scss";
+@import "@styles/mixins.scss";
+
+.team-panel {
+  @include setDisplay(flex, start, start, row);
+  border: 2px solid $cl-white-25;
+  padding: 30px;
+  gap: 2.5%;
+
+  @media (width <= 992px) {
+    flex-direction: column;
+    gap: 60px;
+  }
+}

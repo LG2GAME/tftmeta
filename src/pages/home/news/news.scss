@@ -1,0 +1,47 @@
+@import "@styles/mixins.scss";
+@import "@styles/colors.scss";
+
+.latest-news {
+  @include minHeight();
+  @include setDisplay(flex, center, space-around, column);
+  text-align: center;
+  padding: 30px 0;
+  height: 100vh;
+
+  &__content {
+    @include setDisplay(flex, center, center, row);
+    gap: 60px;
+    text-align: left;
+    height: 100%;
+    width: 100%;
+
+    &-video,
+    &-news {
+      width: 40%;
+      height: 100%;
+    }
+
+    &-news {
+      @include setDisplay(flex, center, space-between, column);
+      gap: 30px;
+      height: 100%;
+    }
+  }
+}
+
+@media (width <= 1200px) {
+  .latest-news__content-news {
+    width: 50%;
+  }
+}
+
+@media (width <= 992px) {
+  .latest-news__content {
+    flex-direction: column;
+
+    &-video,
+    &-news {
+      width: 100%;
+    }
+  }
+}

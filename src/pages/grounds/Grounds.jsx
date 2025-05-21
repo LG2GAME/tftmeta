@@ -1,10 +1,8 @@
-import { Cards as Card } from "@components/common/cards/Cards";
+import { Card } from "@components/common";
 
-import "./Grounds.scss";
+import "./grounds.scss";
 
-import coachingIMG from "@assets/images/coaching.svg";
-import economyIMG from "@assets/images/economy.svg";
-import firstStepsIMG from "@assets/images/first-steps.svg";
+import { groundsListData } from "@assets/data";
 
 function Grounds() {
   return (
@@ -17,25 +15,18 @@ function Grounds() {
         </p>
       </div>
       <div className="grounds__list">
-        <Card
-          path="https://www.youtube.com/watch?v=-qCOE1gWw6k"
-          imageSRC={firstStepsIMG}
-          blank={true}
-          title="podstawy gry"
-          text="Opanuj podstawy TFT – twórz drużyny, zarządzaj przedmiotami i dominuj na planszy!"
-        />
-        <Card
-          path="economy"
-          imageSRC={economyIMG}
-          title="ekonomia"
-          text="Naucz się podstaw oszczędzania i inwestowania złota"
-        />
-        <Card
-          path="leveling"
-          imageSRC={coachingIMG}
-          title="Poziom"
-          text="Dowiedz się, kiedy awansować i zdobyć przewagę!"
-        />
+        {groundsListData.map(
+          ({ path, image, blank, title, description }, index) => (
+            <Card
+              key={index}
+              path={path}
+              imageSRC={image}
+              blank={blank ? blank : null}
+              title={title}
+              text={description}
+            />
+          )
+        )}
       </div>
     </section>
   );

@@ -29,7 +29,7 @@ const CookieConsent = () => {
         cookies, które pomagają nam dostarczać Ci najlepsze strategie i treści.
       </p>
       <div className="cookie-consent-more">
-        <Link to="/p-privacy" className="cookie-consent-button">
+        <Link to="/privacy" className="cookie-consent-button">
           Polityka prywatności
         </Link>
         <button className="cookie-consent-button" onClick={handleAccept}>

@@ -1,0 +1,6 @@
+@import "@styles/colors.scss";
+@import "@styles/mixins.scss";
+
+.board {
+  @include setDisplay(flex, center, center, column);
+}

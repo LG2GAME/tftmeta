@@ -1,0 +1,47 @@
+@import "@styles/colors.scss";
+@import "@styles/mixins.scss";
+
+.item-list {
+  @include setDisplay(flex, center, center, column);
+  width: 37.5%;
+  gap: 15px;
+
+  &__settings {
+    @include setDisplay(flex, center, center, column);
+    width: 100%;
+
+    &--items {
+      flex-direction: column;
+    }
+  }
+
+  &__half {
+    @include setDisplay();
+    gap: 15px;
+  }
+
+  &__full {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  @media (width <= 1200px) {
+    &__half,
+    &__full {
+      gap: 10px;
+    }
+  }
+
+  @media (width <= 992px) {
+    width: 100%;
+  }
+
+  @media (width <= 576px) {
+    &__half,
+    &__full {
+      gap: 5px;
+    }
+  }
+}

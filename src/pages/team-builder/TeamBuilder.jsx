@@ -1,5 +1,5 @@
-import TeamBoard from "@pages/team-builder/board/TeamBoard";
-import TeamPanel from "@pages/team-builder/panel/TeamPanel";
+import TeamBoard from "./team-board/TeamBoard";
+import TeamPanel from "./team-panel/TeamPanel";
 
 export default function TeamBuilder() {
   return (

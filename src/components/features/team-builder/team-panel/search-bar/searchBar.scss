@@ -1,0 +1,32 @@
+@import "@styles/colors.scss";
+@import "@styles/mixins.scss";
+
+.search-bar {
+  @include setDisplay();
+  border-radius: 6px;
+  border: 2px solid $cl-white-25;
+  gap: 15px;
+  padding: 6px 15px;
+  text-align: center;
+  color: $cl-gray;
+  height: 40px;
+  width: 70%;
+
+  &--items {
+    width: 100%;
+  }
+
+  input {
+    appearance: none;
+    background-color: transparent;
+    border: 0;
+    color: $cl-white;
+    font-size: 14px;
+    outline: none;
+    width: 100%;
+  }
+
+  @media (width <= 576px) {
+    width: 100%;
+  }
+}

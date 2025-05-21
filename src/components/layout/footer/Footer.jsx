@@ -1,7 +1,6 @@
 import { HashLink as Link } from "react-router-hash-link";
-
-import "./Footer.scss";
-import { Icons } from "@assets/icons";
+import "./footer.scss";
+import { media } from "../../../assets/icons";
 
 const socialsLinks = {
   facebook: "https://facebook.com/groups/nosynoseya",
@@ -32,7 +31,7 @@ export default function footer() {
         <section className="footer__t-container footer__info ">
           <h5 className="header m-0">informacje</h5>
           <ul className="m-0 p-0">
-            <Link to="/p-privacy" className="footer__t-container-link">
+            <Link to="/privacy" className="footer__t-container-link">
               <p className="m-0 ">Polityka prywatności</p>
             </Link>
             <Link to="/statute" className="footer__t-container-link">
@@ -49,7 +48,7 @@ export default function footer() {
             <Link to="/" className="footer__t-container-link">
               <p className="m-0 ">Home</p>
             </Link>
-            <Link to="/news" className="footer__t-container-link">
+            <Link to="/patchnotes" className="footer__t-container-link">
               <p className="m-0 ">Aktualności</p>
             </Link>
             <Link to="/grounds" className="footer__t-container-link">
@@ -66,22 +65,22 @@ export default function footer() {
       </div>
       <section className="footer__media">
         <a href={socialsLinks.facebook} target="_blank">
-          <Icons.media.facebook size={32} />
+          <img src={media.facebookIcon} alt="" width={32} />
         </a>
         <a href={socialsLinks.twitter} target="_blank">
-          <Icons.media.twitter size={32} />
+          <img src={media.twitterIcon} alt="" width={32} />
         </a>
         <a href={socialsLinks.instagram} target="_blank">
-          <Icons.media.instagram size={32} />
+          <img src={media.instagramIcon} alt="" width={32} />
         </a>
         <a href={socialsLinks.youtube} target="_blank">
-          <Icons.media.youtube size={32} />
+          <img src={media.youtubeIcon} alt="" width={32} />
         </a>
         <a href={socialsLinks.tiktok} target="_blank">
-          <Icons.media.tiktok size={32} />
+          <img src={media.tiktokIcon} alt="" width={32} />
         </a>
         <a href={socialsLinks.twitch} target="_blank">
-          <Icons.media.twitch size={32} />
+          <img src={media.twitchIcon} alt="" width={32} />
         </a>
       </section>
     </footer>

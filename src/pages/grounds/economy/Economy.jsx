@@ -1,12 +1,9 @@
 import { Accordion } from "react-bootstrap";
+import { AccordionCard } from "@components/features";
+import { groundsEconomyData } from "@assets/data";
+import "./economy.scss";
 
-import AccordionCard from "@components/common/accordion-card/AccordionCard";
-
-import "./Economy.scss";
-
-import economyData from "@assets/data/economyData.json";
-
-function Economy() {
+function GroundsEconomy() {
   return (
     <section className="economy">
       <div className="economy-title">
@@ -20,7 +17,7 @@ function Economy() {
       </div>
       <div className="economy__container mt-5">
         <Accordion defaultActiveKey="0">
-          {economyData.map((data, dataIndex) => (
+          {groundsEconomyData.map((data, dataIndex) => (
             <AccordionCard key={dataIndex} data={data} index={dataIndex} />
           ))}
         </Accordion>
@@ -29,4 +26,4 @@ function Economy() {
   );
 }
 
-export default Economy;
+export default GroundsEconomy;
