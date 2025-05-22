@@ -72,6 +72,14 @@
         }
       }
     }
+
+    @media (width <= 1200px) {
+      width: 80% !important;
+    }
+
+    @media (width <= 768px) {
+      width: 95% !important;
+    }
   }
 
   &__search-bar {
@@ -105,17 +113,5 @@
     &:hover {
       color: $cl-white;
     }
-  }
-}
-
-@media (width <= 1200px) {
-  .modal-content {
-    width: 80% !important;
-  }
-}
-
-@media (width <= 768px) {
-  .modal-content {
-    width: 95% !important;
   }
 }

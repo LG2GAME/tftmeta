@@ -3,9 +3,7 @@
 
 .footer {
   @include setDisplay(flex, start, start, row);
-  & {
-    padding: 60px 0;
-  }
+  padding: 60px 0;
 
   .footer-content {
     align-items: start;
@@ -23,9 +21,7 @@
 
   &__logo {
     @include setDisplay(flex, center, center, column);
-    & {
-      gap: 30px;
-    }
+    gap: 30px;
 
     &-text-info {
       color: $cl-white-25;
@@ -36,9 +32,7 @@
 
   &__t-container {
     @include setDisplay(flex, start, center, column);
-    & {
-      gap: 15px;
-    }
+    gap: 15px;
 
     &-link {
       text-decoration: none;
@@ -47,29 +41,24 @@
     }
   }
 
+  &__logo,
+  &__t-container {
+    @media (width <= 768px) {
+      align-items: center;
+      text-align: center;
+    }
+  }
+
   &__media {
     @include setDisplay(flex, end, space-between, column);
-    & {
-      gap: 15px;
-    }
+
+    gap: 15px;
 
     a {
       color: $cl-gray;
     }
-  }
-}
 
-@media (width <= 768px) {
-  .footer {
-    flex-direction: column;
-
-    &__logo,
-    &__t-container {
-      align-items: center;
-      text-align: center;
-    }
-
-    &__media {
+    @media (width <=768px) {
       flex-direction: row;
       width: 100%;
       margin-top: 30px;
@@ -80,5 +69,9 @@
         text-align: center;
       }
     }
+  }
+
+  @media (width <= 768px) {
+    flex-direction: column;
   }
 }

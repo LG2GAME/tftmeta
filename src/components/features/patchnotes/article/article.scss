@@ -11,6 +11,10 @@
     height: 100%;
     object-fit: cover;
     border-radius: 25px;
+
+    @media (width<=768px) {
+      width: 100%;
+    }
   }
 
   &__content {
@@ -28,6 +32,10 @@
       color: $cl-gray;
       margin-bottom: 15px !important;
     }
+
+    @media (width<=768px) {
+      width: 100%;
+    }
   }
 
   &__more {
@@ -37,25 +45,16 @@
     a {
       color: $cl-gray;
     }
-  }
-}
 
-@media (width <= 768px) {
-  .article {
-    flex-direction: column;
-    height: 100%;
-    gap: 15px;
-
-    img,
-    &__content {
-      width: 100%;
+    @media (width <= 576px) {
+      flex-direction: column-reverse;
+      gap: 15px;
     }
   }
-}
 
-@media (width <= 576px) {
-  .article__more {
-    flex-direction: column-reverse;
+  @media (width <= 768px) {
+    flex-direction: column;
+    height: 100%;
     gap: 15px;
   }
 }

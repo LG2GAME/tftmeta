@@ -28,6 +28,12 @@
       &--active {
         text-decoration: underline;
       }
+
+      @media (width <=576px) {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+      }
     }
 
     &:hover {
@@ -41,11 +47,5 @@
 
   @media (width <= 576px) {
     width: 100%;
-
-    &--items {
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-    }
   }
 }

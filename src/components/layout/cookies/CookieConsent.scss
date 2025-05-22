@@ -16,47 +16,37 @@
 
   &-more {
     @include setDisplay(flex, center, space-between, column);
-    & {
-      gap: 15px;
-      width: 100%;
-    }
+    gap: 15px;
+    width: 100%;
   }
 
   &-button {
     @include setDisplay();
     @include setTransition();
-    & {
-      background-color: transparent;
-      border-radius: 99px;
-      border: 2px solid $cl-white;
-      color: $cl-white;
-      padding: 0.75rem 0;
-      text-decoration: none;
-      text-transform: uppercase;
-      width: 100%;
-    }
+    background-color: transparent;
+    border-radius: 99px;
+    border: 2px solid $cl-white;
+    color: $cl-white;
+    padding: 0.75rem 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 100%;
 
     &:hover {
       @include setScale();
     }
   }
-}
 
-@media (width <= 1200px) {
-  .cookie-consent {
+  @media (width <= 1200px) {
     max-width: 50%;
   }
-}
 
-@media (width <= 992px) {
-  .cookie-consent {
+  @media (width <= 992px) {
     max-width: 75%;
     padding: 15px 30px;
   }
-}
 
-@media (width <= 575px) {
-  .cookie-consent {
+  @media (width <= 575px) {
     max-width: 100%;
     left: 1.5vw;
   }

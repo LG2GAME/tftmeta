@@ -14,6 +14,19 @@
     }
   }
 
+  &__half,
+  &__full {
+    gap: 15px;
+
+    @media (width <= 576px) {
+      gap: 5px;
+    }
+
+    @media (width <= 1200px) {
+      gap: 10px;
+    }
+  }
+
   &__half {
     @include setDisplay();
     gap: 15px;
@@ -26,21 +39,7 @@
     flex-wrap: wrap;
   }
 
-  @media (width <= 1200px) {
-    &__half,
-    &__full {
-      gap: 10px;
-    }
-  }
-
   @media (width <= 992px) {
     width: 100%;
-  }
-
-  @media (width <= 576px) {
-    &__half,
-    &__full {
-      gap: 5px;
-    }
   }
 }

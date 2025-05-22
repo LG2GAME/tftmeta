@@ -3,9 +3,7 @@
 
 .navbar {
   @include setDisplay(flex, center, center, row);
-  & {
-    height: 13.75vh;
-  }
+  height: 13.75vh;
 
   .nav {
     &-link {
@@ -18,12 +16,10 @@
       &--btn {
         @include setDisplay();
         @include setTransition();
-        & {
-          border-radius: 99px;
-          border: 2px solid $cl-white;
-          padding: 0px 15px !important;
-          text-decoration: none;
-        }
+        border-radius: 99px;
+        border: 2px solid $cl-white;
+        padding: 0px 15px !important;
+        text-decoration: none;
       }
     }
 
@@ -44,42 +40,40 @@
 
     .nav-link {
       text-align: left;
+
+      @media (width < 992px) {
+        text-align: center;
+      }
+    }
+
+    @media (width < 992px) {
+      background-color: transparent !important;
+      border-color: $cl-white-25;
+      color: $cl-white !important;
+      padding: 8px 15px !important;
     }
   }
 
-  &__sidebar-body {
-    @include setDisplay(flex, center, end, row);
-    & {
+  &__sidebar {
+    &-body {
+      @include setDisplay(flex, center, end, row);
       color: $cl-white !important;
       text-align: start;
       text-transform: capitalize;
+
+      @media (width < 992px) {
+        justify-content: center;
+        text-align: center;
+      }
     }
-  }
-}
 
-@media (width < 992px) {
-  .navbar__sidebar {
-    background-color: rgb(27, 27, 62);
-    background: linear-gradient(180deg, rgb(27, 37, 62) 0%, rgb(0, 0, 0) 100%);
-
-    &-body {
-      justify-content: center;
-      text-align: center;
+    @media (width < 992px) {
+      background-color: rgb(27, 27, 62);
+      background: linear-gradient(
+        180deg,
+        rgb(27, 37, 62) 0%,
+        rgb(0, 0, 0) 100%
+      );
     }
-  }
-
-  .dropdown-menu {
-    background-color: transparent !important;
-    border-color: $cl-white-25;
-    color: $cl-white !important;
-    padding: 8px 15px !important;
-
-    .nav-link {
-      text-align: center;
-    }
-  }
-
-  .nav-account {
-    font-size: 32px;
   }
 }
