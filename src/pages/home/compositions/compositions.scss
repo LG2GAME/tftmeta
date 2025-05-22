@@ -2,7 +2,9 @@
 
 .compsect-container {
   @include minHeight();
-  @include setDisplay(flex, center, space-around, column);
-  padding: 30px 0;
-  text-align: center;
+  & {
+    @include setDisplay(flex, center, space-around, column);
+    padding: 30px 0;
+    text-align: center;
+  }
 }

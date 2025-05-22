@@ -3,7 +3,9 @@
 
 .navbar {
   @include setDisplay(flex, center, center, row);
-  height: 13.75vh;
+  & {
+    height: 13.75vh;
+  }
 
   .nav {
     &-link {
@@ -16,10 +18,12 @@
       &--btn {
         @include setDisplay();
         @include setTransition();
-        border-radius: 99px;
-        border: 2px solid $cl-white;
-        padding: 0px 15px !important;
-        text-decoration: none;
+        & {
+          border-radius: 99px;
+          border: 2px solid $cl-white;
+          padding: 0px 15px !important;
+          text-decoration: none;
+        }
       }
     }
 
@@ -45,9 +49,11 @@
 
   &__sidebar-body {
     @include setDisplay(flex, center, end, row);
-    color: $cl-white !important;
-    text-align: start;
-    text-transform: capitalize;
+    & {
+      color: $cl-white !important;
+      text-align: start;
+      text-transform: capitalize;
+    }
   }
 }
 

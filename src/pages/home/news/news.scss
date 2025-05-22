@@ -2,10 +2,12 @@
 
 .latest-news {
   @include minHeight();
-  @include setDisplay(flex, center, space-around, column);
-  text-align: center;
-  padding: 30px 0;
-  height: 100vh;
+  & {
+    @include setDisplay(flex, center, space-around, column);
+    text-align: center;
+    padding: 30px 0;
+    height: 100vh;
+  }
 
   &__content {
     @include setDisplay(flex, center, center, row);

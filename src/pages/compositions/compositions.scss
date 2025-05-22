@@ -1,8 +1,10 @@
 @use "@styles/mixins.scss" as *;
 
 .composition {
-  @include setDisplay(flex, center, center, column);
   @include minHeight(86.25vh);
-  text-align: center;
-  padding: 30px 0;
+  & {
+    @include setDisplay(flex, center, center, column);
+    text-align: center;
+    padding: 30px 0;
+  }
 }

@@ -3,6 +3,7 @@
 
 .tooltip-info {
   @include setDisplay(flex, center, center, column);
+
   background-color: $cl-dark-gray;
   padding: 15px;
   margin: 0 15px;
@@ -39,14 +40,12 @@
     }
   }
 
-  &__traits {
-    &-list {
-      @include setDisplay(flex, start, center, column);
-      gap: 15px;
-      margin: 0;
-      padding: 0;
-      list-style-type: none;
-    }
+  &__traitslist {
+    @include setDisplay(flex, start, center, column);
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
   }
 
   &__cost {
@@ -62,6 +61,7 @@
 
   &__name {
     @include setDisplay();
+
     gap: 15px;
 
     &-icon {
@@ -81,8 +81,9 @@
   }
 
   &__recipe {
-    gap: 15px;
     @include setDisplay();
+
+    gap: 15px;
 
     &-name {
       font-size: 12px;
@@ -90,6 +91,7 @@
 
     &-half-item {
       @include setDisplay(flex, center, center, row);
+
       gap: 15px;
 
       &-icon {

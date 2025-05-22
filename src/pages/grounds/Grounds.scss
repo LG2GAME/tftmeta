@@ -2,10 +2,12 @@
 @use "@styles/mixins.scss" as *;
 
 .grounds {
-  @include setDisplay(flex, center, space-around, column);
   @include minHeight(86.25vh);
-  text-align: center;
-  padding: 30px 0;
+  & {
+    @include setDisplay(flex, center, space-around, column);
+    text-align: center;
+    padding: 30px 0;
+  }
 
   &__list {
     display: grid;

@@ -4,6 +4,7 @@
 .button {
   @include setDisplay();
   @include setTransition();
+
   background-color: transparent;
   border-radius: 99px;
   border: 2px solid $cl-white;
@@ -16,16 +17,12 @@
   &:hover {
     @include setScale();
   }
-}
 
-@media (width <= 1200px) {
-  .button {
+  @media (width <= 1200px) {
     padding: 0.6rem 4rem;
   }
-}
 
-@media (width <= 576px) {
-  .button {
+  @media (width <= 576px) {
     padding: 0.6rem 2.75rem;
   }
 }

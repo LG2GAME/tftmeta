@@ -15,22 +15,26 @@
   }
 
   &-more {
-    width: 100%;
     @include setDisplay(flex, center, space-between, column);
-    gap: 15px;
+    & {
+      gap: 15px;
+      width: 100%;
+    }
   }
 
   &-button {
     @include setDisplay();
     @include setTransition();
-    background-color: transparent;
-    border-radius: 99px;
-    border: 2px solid $cl-white;
-    color: $cl-white;
-    padding: 0.75rem 0;
-    text-decoration: none;
-    text-transform: uppercase;
-    width: 100%;
+    & {
+      background-color: transparent;
+      border-radius: 99px;
+      border: 2px solid $cl-white;
+      color: $cl-white;
+      padding: 0.75rem 0;
+      text-decoration: none;
+      text-transform: uppercase;
+      width: 100%;
+    }
 
     &:hover {
       @include setScale();

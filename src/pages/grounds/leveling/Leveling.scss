@@ -5,8 +5,10 @@
 
   &-title {
     @include minHeight(86.25vh);
-    @include setDisplay(flex, center, center, column);
-    text-align: center;
+    & {
+      @include setDisplay(flex, center, center, column);
+      text-align: center;
+    }
 
     p {
       width: 50%;
