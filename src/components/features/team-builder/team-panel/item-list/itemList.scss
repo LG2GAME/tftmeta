@@ -1,5 +1,4 @@
-@import "@styles/colors.scss";
-@import "@styles/mixins.scss";
+@use "@styles/mixins.scss" as *;
 
 .item-list {
   @include setDisplay(flex, center, center, column);

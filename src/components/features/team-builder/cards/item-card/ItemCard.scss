@@ -1,4 +1,4 @@
-@import "@styles/mixins.scss";
+@use "@styles/mixins.scss" as *;
 
 .item-card {
   &__onboard-icon {

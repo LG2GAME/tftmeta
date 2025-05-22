@@ -1,5 +1,5 @@
 export { default as Media } from "./news/media/Media";
-export { default as Composition } from "./compositions/composition/Composition";
+export { default as Composition } from "./compositions/Composition";
 export { default as Trait } from "./team-builder/traits/Trait";
 export { default as Article } from "./patchnotes/article/Article";
 export { default as AccordionCard } from "./grounds/accordion-card/AccordionCard";

@@ -1,5 +1,4 @@
-@import "@styles/colors.scss";
-@import "@styles/mixins.scss";
+@use "@styles/mixins.scss" as *;
 
 .champion-list {
   @include setDisplay(flex, start, start, column);

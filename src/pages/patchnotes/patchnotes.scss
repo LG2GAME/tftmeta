@@ -1,5 +1,5 @@
-@import "@styles/mixins.scss";
-@import "@styles/colors.scss";
+@use "@styles/colors.scss" as *;
+@use "@styles/mixins.scss" as *;
 
 .news {
   @include setDisplay(flex, center, center, column);
