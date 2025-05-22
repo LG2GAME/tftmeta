@@ -98,7 +98,6 @@ export const manageItemContext = (
 
 export const setTraitByItem = (emblems, availableTraits, setRawTraits) => {
   if (!availableTraits || availableTraits.length === 0) {
-    console.log("Waiting for availableTraits to load...");
     return;
   }
 

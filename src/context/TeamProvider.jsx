@@ -114,7 +114,6 @@ export const TeamProvider = ({ children }) => {
 
   const setTraitByItem = (emblems) => {
     if (!availableTraits || availableTraits.length === 0) {
-      console.log("Waiting for availableTraits to load...");
       return;
     }
 

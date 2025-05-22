@@ -1,6 +1,7 @@
 import ReactDOM from "react-dom";
 import { useTooltipPosition } from "@hooks";
 import { Trait } from "@components/features";
+import { icons } from "@assets/icons";
 import "./tooltip.scss";
 
 const ChampionInfo = ({ champion, triggerRef }) => {
@@ -35,6 +36,7 @@ const ChampionInfo = ({ champion, triggerRef }) => {
       </div>
       <div className="champ-info__cost">
         <p className="m-0">{champion.tier}</p>
+        <img src={icons.coinIcon} alt="" width={20} />
       </div>
     </section>,
     document.body

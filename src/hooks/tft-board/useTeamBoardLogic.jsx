@@ -17,7 +17,6 @@ export function useTeamBoardLogic() {
   }, []);
 
   useEffect(() => {
-    console.log("ClearBoard useEffect triggered, clearBoard:", clearBoard);
     if (clearBoard) {
       setSelectedAugments([null, null, null]);
       saveBoardState(null, null, []);

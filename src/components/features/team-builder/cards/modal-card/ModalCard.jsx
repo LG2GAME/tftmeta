@@ -48,7 +48,7 @@ const ModalCard = ({ isOpen, closeModal, onSelectAugment }) => {
         {filteredAugments.length > 0 ? (
           filteredAugments.map((augment) => (
             <div
-              key={augment.id}
+              key={augment.apiName}
               className="augment-option"
               onClick={() => onSelectAugment(augment)}
             >

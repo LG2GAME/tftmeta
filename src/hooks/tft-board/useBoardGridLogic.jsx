@@ -30,7 +30,6 @@ export function useBoardGridLogic({ clearBoard }) {
   }, [board, championItems]);
 
   useEffect(() => {
-    console.log("ClearBoard useEffect triggered, clearBoard:", clearBoard);
     if (clearBoard) {
       setBoard([]);
       setChampionItems({});

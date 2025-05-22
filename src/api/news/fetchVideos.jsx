@@ -14,7 +14,6 @@ export const fetchVideos = async (YTUID) => {
       "application/xml"
     );
 
-    // PARSING ERROR
     if (xmlParser.querySelector("parsererror")) {
       console.error(
         "Błąd parsowania XML:",
@@ -23,15 +22,17 @@ export const fetchVideos = async (YTUID) => {
       return [];
     }
 
-    // VIDEO VARIABLES
     const entries = xmlParser.querySelectorAll("entry");
-    const videos = Array.from(entries).map((entry) => ({
-      link: entry.querySelector("link").getAttribute("href"),
-      thumbnail: `https://img.youtube.com/vi/${new URL(
+    const videos = Array.from(entries).map((entry) => {
+      const videoId = new URL(
         entry.querySelector("link").getAttribute("href")
-      ).searchParams.get("v")}/maxresdefault.jpg`,
-      title: entry.querySelector("title").textContent,
-    }));
+      ).searchParams.get("v");
+      return {
+        link: `https://www.youtube.com/watch?v=${videoId}`,
+        thumbnail: `https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`,
+        title: entry.querySelector("title").textContent,
+      };
+    });
 
     return videos;
   } catch (error) {
